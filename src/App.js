@@ -71,15 +71,15 @@ class App extends Component {
           photo={this.state.movies[i].poster_path}
           date={this.state.movies[i].release_date}
           description={this.state.movies[i].overview}
+          note={this.state.movies[i].vote_average}
         ></Title>
       );
     }
     return (
       <div>
-        <header>
+        <header className="header">
           <img src="/logo-allocine.png" alt="logo"></img>
         </header>
-
         <ul className="disposition">
           <li
             onClick={() => {
@@ -133,7 +133,6 @@ class App extends Component {
         <div className="films">
           <ul className="resultats"> {moviesComponents}</ul>
         </div>
-
         <div className="container">
           {this.renderPreviousPage()}
           <button
@@ -147,6 +146,7 @@ class App extends Component {
             Page suivante
           </button>
         </div>
+        <div className="signature">site réalisé par Philipson</div>
       </div>
     );
   }

@@ -7,8 +7,9 @@ class Title extends React.Component {
         <li>
           <h2>{this.props.label}</h2>
         </li>
-        <li>
+        <li className="sous-titre">
           <h4>{this.props.date}</h4>
+          <h4>Note: {this.props.note}</h4>
         </li>
         <img
           alt="Poster"
